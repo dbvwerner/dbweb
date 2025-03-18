@@ -429,12 +429,12 @@ nav ul li a:hover::after {
 .timeline-item {
     padding: var(--spacing-md) 40px;
     position:relative;
-    width: 60%;
+    width: 70%;
     box-sizing: border-box;
 }
 
 .timeline-item:nth-child(odd) {
-    right: 10%;
+    right: 20%;
 }
 
 .timeline-item:nth-child(even) {
@@ -472,9 +472,11 @@ nav ul li a:hover::after {
 }
 
 .timeline-list {
+    text-decoration: none;
+    color: var(--text-light);
     padding-left: var(--spacing-md);
     padding-top: var(--spacing-sm2);
-    font-size: 14px;
+    font-size: 16px;
     list-style-position: outside;
 }
 
