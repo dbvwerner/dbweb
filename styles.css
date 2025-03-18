@@ -154,15 +154,15 @@ header .container {
 }
 
 .logo:hover{
-    animation: shake 0.5s ease
+    animation: rot 0.5s ease
 }
 
-@keyframes shake{
-    0% {transform: translateX(0);}
-    25% {transform: translateX(-5px);}
-    50% {transform: translateX(5px);}
-    75% {transform: translateX(-5px);}
-    100% {transform: translateX(0);}
+@keyframes rot{
+    0% {transform: rotate(0)}
+    25% {transform: rotate(-30deg);}
+    50% {transform: rotate(30deg);}
+    75% {transform: rotate(-30deg);}
+    100% {transform: rotate(0);}
 }
 
 nav ul {
