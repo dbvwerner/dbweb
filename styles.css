@@ -74,7 +74,7 @@ a:hover {
 }
 
 ul {
-    list-style-position: inside;
+    list-style-position: outside;
     text-align:left;
     margin-bottom: var(--spacing-md);
 }
@@ -146,6 +146,15 @@ header .container {
     padding: var(--spacing-md) 0;
 }
 
+.material-icons {
+    vertical-align:text-bottom;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
@@ -159,9 +168,9 @@ header .container {
 
 @keyframes rot{
     0% {transform: rotate(0)}
-    25% {transform: rotate(-30deg);}
-    50% {transform: rotate(30deg);}
-    75% {transform: rotate(-30deg);}
+    25% {transform: rotate(-5deg);}
+    50% {transform: rotate(5deg);}
+    75% {transform: rotate(-5deg);}
     100% {transform: rotate(0);}
 }
 
@@ -563,6 +572,7 @@ nav ul li a:hover::after {
     transition: opacity var(--transition-speed) ease;
     overflow-y: auto;
     padding: var(--spacing-md);
+    list-style-position: outside;
 }
 
 /* Show modal when targeted */
@@ -727,6 +737,50 @@ footer {
     padding: var(--spacing-lg) 0;
 }
 
+/* Tooltip Styles */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 250px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Arrow for tooltip */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: var(--secondary-color) transparent transparent transparent;
+}
+
+/* Show the tooltip when hovering over the container */
+.tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     .section-title {
@@ -806,5 +860,10 @@ footer {
     
     .waterfall-animation span {
         font-size: 16px;
+    }
+
+    .tooltip {
+        width: 200px;
+        font-size: 0.8rem;
     }
 }

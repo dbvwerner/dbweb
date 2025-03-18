@@ -9,12 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 <body>
     <!-- Header with Navigation -->
     <header>
         <div class="container">
-            <h1 class="logo">dbvwerner</h1>
+            
+            <h1 class="logo">
+                <span class = "material-icons">terminal</span>
+                dbvwerner
+            </h1>
             <nav>
                 <ul>
                     <!-- Navigation links with smooth scroll to sections -->
@@ -211,7 +218,9 @@
                         </a>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Out-of-Order RISC-V Processor</h3>
+                        <h3>Out-of-Order RISC-V Processor
+                            <span class="material-icons">memory</span>
+                        </h3>
                         <p>A fully synthesizable Advanced Superscalar processor written with SystemVerilog.</p>
                         <div class="portfolio-tags">
                             <span>SystemVerilog</span>
@@ -231,7 +240,9 @@
                         </a>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Remote Camera Controller</h3>
+                        <h3>Remote Camera Controller
+                            <span class="material-icons">linked_camera</span>
+                        </h3>
                         <p>An ergonomic remote-camera controller with a manual movement mode and auto-tracking mode.</p>
                         <div class="portfolio-tags">
                             <span>C</span>
@@ -280,7 +291,7 @@
                 </div>
                 <div class="modal-text">
                     <h3>Overview</h3>
-                    <ul>
+                    <ul class="modal-list">
                         <li>8-Week course project <em>(EECS 470)</em> to build an <b>Out-of-Order processor</b> with <b>Speculative Execution</b> and additional advanced features.</li>
                         <li>Programmed in <b>SystemVerilog</b> and <b>Fully Synthesizable</b>.</li>
                         <li>Rigorously tested modules using unit tests and processor execution using programs such as <b>AlexNet</b> and a <b>Simulated CPU in C</b>.</li>
@@ -316,10 +327,12 @@
                 </div>
                 <div class="modal-text">
                     <h3>Overview</h3>
-                    <li>Course project <em>(EECS 373)</em> to design an embedded system starting from a <b>prototype design</b> to a <b>fully functioning system</b>.</li>
-                    <li>Created a <b>control loop</b> that moved a series of <b>pan-and-tilt servos</b> on a tripod using <b>user input</b> or <b>camera tracking data</b>.</li>
-                    <li>Created <b>graphics library</b> with support for loading bitmap images onto an OLED Display using <b>I2C</b> protocol.</li>
-                    <li>Designed and assembled <b>PCB</b> to fit inside constraints of custom-made ergonomic user-controller.</li>
+                    <ul class="modal-ul">
+                        <li class="modal-list">Course project <em>(EECS 373)</em> to design an embedded system starting from a <b>prototype design</b> to a <b>fully functioning system</b>.</li>
+                        <li class="modal-list">Created a <b>control loop</b> that moved a series of <b>pan-and-tilt servos</b> on a tripod using <b>user input</b> or <b>camera tracking data</b>.</li>
+                        <li class="modal-list">Created <b>graphics library</b> with support for loading bitmap images onto an OLED Display using <b>I2C</b> protocol.</li>
+                        <li class="modal-list">Designed and assembled <b>PCB</b> to fit inside constraints of custom-made ergonomic user-controller.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -366,12 +379,22 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Contact</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
                         <h3>Email</h3>
-                        <p>dbvwerner@gmail.com / dbwerner@umich.edu</p>
+                        <div class = "tooltip-container">
+                            <p>dbvwerner@gmail.com
+                                <span class="tooltip">My personal email. Feel free to reach out to me here about anything.</span>
+                            </p>
+                        </div>
+                        <p></p>
+                        <div class = "tooltip-container">
+                            <p>dbwerner@umich.edu
+                                <span class="tooltip">My educational email. Reach out to me here for school-related communication.</span>
+                            </p>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <h3>Location</h3>
