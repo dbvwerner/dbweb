@@ -92,6 +92,7 @@ li {
     font-weight: 400;
     font-family: "New Rocker", serif;
     font-style: normal;
+    text-shadow: 2px 2px #6d6d6d;
 }
 
 .section-title::after {
@@ -305,6 +306,12 @@ nav ul li a:hover::after {
     font-size: 7rem;
     margin-bottom: var(--spacing-sm);
     transition: ease;
+    text-shadow: 3px 3px #6d6d6d;
+}
+
+.hero-content-highlight {
+    color: var(--primary-color);
+    text-shadow: 3px 3px #ffffff;
 }
 
 .hero-content p {
