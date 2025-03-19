@@ -89,9 +89,9 @@ li {
     margin-bottom: var(--spacing-xl);
     position: relative;
     padding-bottom: var(--spacing-md);
-    font-family: "Kumar One", serif;
-    font-weight: 300;
-    
+    font-weight: 400;
+    font-family: "New Rocker", serif;
+    font-style: normal;
 }
 
 .section-title::after {
@@ -391,7 +391,8 @@ nav ul li a:hover::after {
 }
 
 .img-placeholder {
-    background-color: #eee;
+    background-color: #1e1e1e;
+    color:#1e1e1e;
     height: auto;
     width: 100%;
     display: flex;
@@ -409,10 +410,11 @@ nav ul li a:hover::after {
     background-color: #eee;
     height: 300px;
     width: 300px;
+    vertical-align: super;
     display: flex;
     border-radius: 10px;
     transition: transform var(--transition-speed) ease;
-    object-fit:cover;
+    object-fit:fill;
 }
 
 .img-placeholder-modal:hover {
@@ -614,7 +616,7 @@ nav ul li a:hover::after {
 
 .portfolio-img .img-placeholder {
     height: 200px;
-    background-color: #eee;
+    background-color: #1e1e1e;
 }
 
 .portfolio-info {
@@ -740,6 +742,7 @@ nav ul li a:hover::after {
 .modal-image {
     flex: 1;
     min-width: 300px;
+    vertical-align: middle;
 }
 
 .modal-image .img-placeholder {
