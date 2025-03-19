@@ -127,7 +127,7 @@
                 </div>
                 <div class="about-text">
                     <h3 class="about-heading">A Little Bit About Me</h3>
-                    <p>Hi there! I'm Daniel Werner, an undergrad at the <em>University of Michigan</em> studying <b>Computer Engineering</b>.</p>
+                    <p>Howdy! I'm Daniel Werner, an undergrad at the <em>University of Michigan</em> studying <b>Computer Engineering</b>.</p>
                     <p>I'm passionate about working with <b>embedded systems</b> and <b>hardware</b>, and I'm always looking for new opportunities to diversify my knowledge of <b>software and hardware design</b>. I have coursework and projects that have helped me <em>gain a deeper understanding</em> of <b>embedded systems</b>, <b>computer architecture</b>, and <b>operating systems</b>.</p>
                     <p>I'm also interested in learning about <b>history</b> and creating video games with <b>didactic elements</b>.</p>
                     
@@ -151,8 +151,11 @@
                                 <span>Git</span>
                                 <span>KiCad</span>
                                 <span>Xilinx Vivado</span>
+                                <span>Xilinx Vitis</span>
                                 <span>Intel Quartus Prime</span>
                                 <span>LTSpice</span>
+                                <span>gem5 Simulator</span>
+                                <span>LLVM</span>
                                 <span>Synopsis Verdi</span>
                                 <span>Cadence Virtuoso</span>
                                 <span>Altium Designer</span>
@@ -172,8 +175,11 @@
                                 <span>Git</span>
                                 <span>KiCad</span>
                                 <span>Xilinx Vivado</span>
+                                <span>Xilinx Vitis</span>
                                 <span>Intel Quartus Prime</span>
                                 <span>LTSpice</span>
+                                <span>gem5 Simulator</span>
+                                <span>LLVM</span>
                                 <span>Synopsis Verdi</span>
                                 <span>Cadence Virtuoso</span>
                                 <span>Altium Designer</span>
@@ -803,7 +809,7 @@
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Class Overview</h3>
-                    <p>Analyzed circuits using KVL and KCL, identified common circuit types such as Wheatstone bridges, and simulated circuits using LTSpice. Applied fundamentals by building and analyzing circuits in lab with devices such as op-amps.</p>
+                    <p>Analyzed circuits using KVL and KCL, identified common circuit types (Resistor Dividers, Wheatstone Bridges, RLC Circuits, etc.) and simulated circuits using LTSpice. Applied fundamentals by building and analyzing circuits in lab with devices such as op-amps.</p>
                     
                     <h3>Technologies & Skills</h3>
                     <div class="portfolio-tags">
@@ -843,8 +849,11 @@
                         <span>Git</span>
                         <span>KiCad</span>
                         <span>Xilinx Vivado</span>
+                        <span>Xilinx Vitis</span>
                         <span>Intel Quartus Prime</span>
                         <span>LTSpice</span>
+                        <span>gem5 Simulator</span>
+                        <span>LLVM</span>
                         <span>Synopsis Verdi</span>
                         <span>Cadence Virtuoso</span>
                         <span>Altium Designer</span>
@@ -901,6 +910,7 @@
             let animationPaused = false;
             let startX = 0;
             let startScrollPosition = 0;
+            let autoScrolling = true;
             
             // Calculate the width of one set of content
             function calculateContentWidth() {
@@ -914,14 +924,20 @@
             // Handle mouse enter/leave
             scrollingContainer.addEventListener('mouseenter', function() {
                 isHovering = true;
-                pauseAnimation();
+                if (autoScrolling) {
+                    pauseAnimation();
+                }
             });
             
             scrollingContainer.addEventListener('mouseleave', function() {
                 isHovering = false;
-                if (!isDragging) {
+                if (isDragging) {
+                    isDragging = false;
+                    scrollingContainer.classList.remove('dragging');
+                    // Don't resume animation, keep the current position
                     resumeAnimation();
                 }
+                autoScrolling = true;
             });
             
             // Pause the automatic animation
@@ -939,24 +955,28 @@
                     }
                     
                     animationPaused = true;
+                    autoScrolling = false;
                     scrollingContent.style.transform = `translateX(${scrollPosition}px)`;
                     scrollingContent.style.animation = 'none';
                 }
             }
             
-            // Resume the automatic animation
+            // Resume the automatic animation - only used when explicitly requested
             function resumeAnimation() {
-                animationPaused = false;
-                
-                // Calculate what percentage through the animation we are
-                const percentage = (Math.abs(scrollPosition) % contentWidth) / contentWidth;
-                
-                // Reset the animation with the correct starting point
-                scrollingContent.style.animation = 'none';
-                scrollingContent.offsetHeight; // Trigger reflow
-                scrollingContent.style.animation = `scroll 30s linear infinite`;
-                scrollingContent.style.animationDelay = `-${percentage * 30}s`;
-                scrollingContent.style.transform = '';
+                if (animationPaused) {
+                    animationPaused = false;
+                    autoScrolling = true;
+                    
+                    // Calculate what percentage through the animation we are
+                    const percentage = (Math.abs(scrollPosition) % contentWidth) / contentWidth;
+                    
+                    // Reset the animation with the correct starting point
+                    scrollingContent.style.animation = 'none';
+                    scrollingContent.offsetHeight; // Trigger reflow
+                    scrollingContent.style.animation = `scroll 30s linear infinite`;
+                    scrollingContent.style.animationDelay = `-${percentage * 30}s`;
+                    scrollingContent.style.transform = '';
+                }
             }
             
             // Handle drag start
@@ -967,6 +987,11 @@
                     startX = e.clientX;
                     startScrollPosition = scrollPosition;
                     scrollingContainer.classList.add('dragging');
+                    
+                    // Make sure animation is paused
+                    if (autoScrolling) {
+                        pauseAnimation();
+                    }
                 }
             });
             
@@ -996,17 +1021,15 @@
                 if (isDragging) {
                     isDragging = false;
                     scrollingContainer.classList.remove('dragging');
-                    
-                    // If not hovering anymore, resume animation
-                    if (!isHovering) {
-                        resumeAnimation();
-                    }
+                    // Don't resume animation, keep the current position
                 }
             });
             
             // Handle touch events for mobile
             scrollingContainer.addEventListener('touchstart', function(e) {
-                pauseAnimation();
+                if (autoScrolling) {
+                    pauseAnimation();
+                }
                 isDragging = true;
                 startX = e.touches[0].clientX;
                 startScrollPosition = scrollPosition;
@@ -1037,7 +1060,7 @@
                 if (isDragging) {
                     isDragging = false;
                     scrollingContainer.classList.remove('dragging');
-                    resumeAnimation();
+                    // Don't resume animation, keep the current position
                 }
             });
             
@@ -1045,6 +1068,11 @@
             scrollingContainer.addEventListener('wheel', function(e) {
                 if (isHovering) {
                     e.preventDefault();
+                    
+                    // Make sure animation is paused if it's still running
+                    if (autoScrolling) {
+                        pauseAnimation();
+                    }
                     
                     // Adjust scroll position based on wheel delta
                     scrollPosition -= e.deltaY;
