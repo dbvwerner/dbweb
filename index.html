@@ -6,7 +6,7 @@
     <title>dbvwerner</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Kumar+One&family=New+Rocker&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Material Icons -->
@@ -17,13 +17,12 @@
     <!-- Header with Navigation -->
     <header>
         <div class="container">
-            
             <h1 class="logo">
                 <span class = "material-icons">terminal</span>
                 dbvwerner
             </h1>
             <nav>
-                <ul>
+                <ul class="nav-ul">
                     <!-- Navigation links with smooth scroll to sections -->
                     <li><a href="#about">About</a></li>
                     <li><a href="#education">Education</a></li>
@@ -99,7 +98,7 @@
         
         <div class="container">
             <div class="hero-content">
-                <h2>Daniel <span class="highlight">Werner</span></h2>
+                <h2><span class="highlight">Daniel </span>Werner</h2>
                 <p>Computer Engineer</p>
                 
                 <!-- Social Media Icons -->
@@ -127,37 +126,63 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <h3>A little bit about me</h3>
+                    <h3 class="about-heading">A Little Bit About Me</h3>
                     <p>Hi there! I'm Daniel Werner, an undergrad at the <em>University of Michigan</em> studying <b>Computer Engineering</b>.</p>
                     <p>I'm passionate about working with <b>embedded systems</b> and <b>hardware</b>, and I'm always looking for new opportunities to diversify my knowledge of <b>software and hardware design</b>. I have coursework and projects that have helped me <em>gain a deeper understanding</em> of <b>embedded systems</b>, <b>computer architecture</b>, and <b>operating systems</b>.</p>
                     <p>I'm also interested in learning about <b>history</b> and creating video games with <b>didactic elements</b>.</p>
-                    <h3>My Skills</h3>
-                    <div class="skills">
-                        <div class="skill">
-                            <span>HTML</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 90%"></div>
+                    
+                    
+                    <h3 class="about-heading">Skills, Tools, and Technologies</h3>
+                    <!-- Infinite Scrolling Skills -->
+                    <a href="#skills-tools">
+                    <div class="scrolling-skills-container" id="scrollingSkills">
+                        <div class="scrolling-skills" id="scrollingContent">
+                            <div class="scrolling-skills-content">
+                                <span>C</span>
+                                <span>C++</span>
+                                <span>SystemVerilog</span>
+                                <span>Verilog</span>
+                                <span>Python</span>
+                                <span>Bash</span>
+                                <span>ARM Assembly</span>
+                                <span>RISC-V Assembly</span>
+                                <span>Java</span>
+                                <span>MATLAB</span>
+                                <span>Git</span>
+                                <span>KiCad</span>
+                                <span>Xilinx Vivado</span>
+                                <span>Intel Quartus Prime</span>
+                                <span>LTSpice</span>
+                                <span>Synopsis Verdi</span>
+                                <span>Cadence Virtuoso</span>
+                                <span>Altium Designer</span>
                             </div>
-                        </div>
-                        <div class="skill">
-                            <span>CSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>UI/UX Design</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 80%"></div>
+                            <!-- Duplicate for seamless scrolling -->
+                            <div class="scrolling-skills-content">
+                                <span>C</span>
+                                <span>C++</span>
+                                <span>SystemVerilog</span>
+                                <span>Verilog</span>
+                                <span>Python</span>
+                                <span>Bash</span>
+                                <span>ARM Assembly</span>
+                                <span>RISC-V Assembly</span>
+                                <span>Java</span>
+                                <span>MATLAB</span>
+                                <span>Git</span>
+                                <span>KiCad</span>
+                                <span>Xilinx Vivado</span>
+                                <span>Intel Quartus Prime</span>
+                                <span>LTSpice</span>
+                                <span>Synopsis Verdi</span>
+                                <span>Cadence Virtuoso</span>
+                                <span>Altium Designer</span>
                             </div>
                         </div>
                     </div>
+                    </a>
+
+
                 </div>
             </div>
         </div>
@@ -171,7 +196,7 @@
                 <!-- Education Item 1 -->
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>University of Michigan</h3>
+                        <span class="umich1">University</span><span class="umich2"> of </span><span class="umich3"> Michigan</span>
                         <h4>B.S.E. in Computer Engineering</h4>
                         <p class="date">Graduating: December 2025</p>
                         <p>Focusing on <b>Embedded Systems</b> and <b>Computer Architecture</b>.</p>
@@ -181,13 +206,13 @@
                                 <h4>Advanced Computer Architecture (EECS 470)</h4>
                             </a>
                             <a href="#class-eecs-573">
-                                <h4>Microarchitecture (EECS 573)</h4>
+                                <h4>Microarchitecture (EECS 573) (In Progress)</h4>
                             </a>
                             <a href="#class-eecs-373">
                                 <h4>Embedded Systems (EECS 373)</h4>
                             </a>
                             <a href="#class-eecs-482">
-                                <h4>Operating Systems (EECS 482)</h4>
+                                <h4>Operating Systems (EECS 482) (In Progress)</h4>
                             </a>
                             <a href="#class-eecs-370">
                                 <h4>Computer Organization (EECS 370)</h4>
@@ -196,7 +221,7 @@
                                 <h4>Data Structures & Algorithms (EECS 281)</h4>
                             </a>
                             <a href="#class-eecs-312">
-                                <h4>Digital Integrated Circuits (EECS 312)</h4>
+                                <h4>Digital Integrated Circuits (EECS 312) (In Progress)</h4>
                             </a>
                             <a href="#class-eecs-216">
                                 <h4>Signals and Systems (EECS 216)</h4>
@@ -209,10 +234,11 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
+                        <span class="mdc1">Miami</span><span class="mdc2"> Dade </span><span class="mdc3">College</span>
                         <h3>Miami-Dade College</h3>
                         <h4>Associate of Arts</h4>
                         <p class="date">Graduated: May 2021</p>
-                        <p>Completed while Dual-Enrolled in High School.</p>
+                        <p>Completed degree while Dual-Enrolled in High School.</p>
                     </div>
                 </div>
             </div>
@@ -349,7 +375,7 @@
                 <!-- Portfolio Item 7 -->
                 <div class="portfolio-item">
                     <div class="portfolio-info">
-                        <a href="project7">
+                        <a href="#project7">
                             <h3>Strategy Game <em>(In Progress)</em>
                                 <span class="material-icons">cottage</span>
                             </h3>
@@ -366,7 +392,7 @@
                 <div class="portfolio-item">
                     <div class="portfolio-info">
                         <a href="#project8">
-                            <h3>8-Bit CPU <em>(In Progress)</em>
+                            <h3>CDTek V1 CPU <em>(In Progress)</em>
                                 <span class="material-icons">memory</span>
                             </h3>
                         </a>
@@ -460,24 +486,7 @@
                 </div>
                 <div class="modal-text">
                     <h3>Project Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
-                    
-                    <h3>Features</h3>
-                    <ul>
-                        <li>Category and tag organization</li>
-                        <li>Search functionality</li>
-                        <li>Comment system with moderation</li>
-                        <li>Responsive design for all devices</li>
-                        <li>Content management system</li>
-                    </ul>
-                    
-                    <h3>Technologies Used</h3>
-                    <div class="portfolio-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Responsive Design</span>
-                    </div>
+                    <p>Coming soon...</p>
                 </div>
             </div>
         </div>
@@ -493,24 +502,8 @@
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Project Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
+                    <p>Coming soon...</p>
                     
-                    <h3>Features</h3>
-                    <ul>
-                        <li>Category and tag organization</li>
-                        <li>Search functionality</li>
-                        <li>Comment system with moderation</li>
-                        <li>Responsive design for all devices</li>
-                        <li>Content management system</li>
-                    </ul>
-                    
-                    <h3>Technologies Used</h3>
-                    <div class="portfolio-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Responsive Design</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -526,24 +519,7 @@
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Project Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
-                    
-                    <h3>Features</h3>
-                    <ul>
-                        <li>Category and tag organization</li>
-                        <li>Search functionality</li>
-                        <li>Comment system with moderation</li>
-                        <li>Responsive design for all devices</li>
-                        <li>Content management system</li>
-                    </ul>
-                    
-                    <h3>Technologies Used</h3>
-                    <div class="portfolio-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Responsive Design</span>
-                    </div>
+                    <p>Coming soon...</p>
                 </div>
             </div>
         </div>
@@ -559,24 +535,7 @@
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Project Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
-                    
-                    <h3>Features</h3>
-                    <ul>
-                        <li>Category and tag organization</li>
-                        <li>Search functionality</li>
-                        <li>Comment system with moderation</li>
-                        <li>Responsive design for all devices</li>
-                        <li>Content management system</li>
-                    </ul>
-                    
-                    <h3>Technologies Used</h3>
-                    <div class="portfolio-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Responsive Design</span>
-                    </div>
+                    <p>Coming soon...</p>
                 </div>
             </div>
         </div>
@@ -592,24 +551,7 @@
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Project Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
-                    
-                    <h3>Features</h3>
-                    <ul>
-                        <li>Category and tag organization</li>
-                        <li>Search functionality</li>
-                        <li>Comment system with moderation</li>
-                        <li>Responsive design for all devices</li>
-                        <li>Content management system</li>
-                    </ul>
-                    
-                    <h3>Technologies Used</h3>
-                    <div class="portfolio-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Responsive Design</span>
-                    </div>
+                    <p>Coming soon...</p>
                 </div>
             </div>
         </div>
@@ -619,30 +561,18 @@
     <div id="project8" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>8-Bit CPU</h2>
+                <h2>CDTek V1 CPU </h2>
                 <a href="#portfolio" class="close-modal">&times;</a>
             </div>
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Project Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
+                    <p>Coming soon...</p>
                     
                     <h3>Features</h3>
                     <ul>
-                        <li>Category and tag organization</li>
-                        <li>Search functionality</li>
-                        <li>Comment system with moderation</li>
-                        <li>Responsive design for all devices</li>
-                        <li>Content management system</li>
+                        <li>Coming soon...</li>
                     </ul>
-                    
-                    <h3>Technologies Used</h3>
-                    <div class="portfolio-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Responsive Design</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -660,11 +590,14 @@
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Class Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
+                    <p>Learned fundamentals of modern processors and modern computer architecture. Classes covered Amdahl's Law, DVFS, Dennard Scaling, Tomasulo's Algorithm, P6 Architecture, MIPS R10K Architecture, Advanced Branch Prediction, Load-Store Queues, Caches, Virtual Memory, Cache Coherence Protocols (MSI, MESI, MOESI).</p>
                     
                     <h3>Projects</h3>
                     <ul>
-                        <li>Category and tag organization</li>
+                        <li>Simple Reservation Station-like Program</li>
+                        <li>Integer Square Root Module with Pipelined Multiplication</li>
+                        <li>5-Stage Pipeline In-Order RISC-V CPU</li>
+                        <li>Out-of-Order RISC-V CPU with Speculative Execution</li>
                     </ul>
                     
                     <h3>Programming Languages & Technologies</h3>
@@ -672,7 +605,8 @@
                         <span>SystemVerilog</span>
                         <span>Verdi</span>
                         <span>RISC-V Assembly</span>
-                        <span></span>
+                        <span>Design Verification</span>
+                        <span>C</span>
                     </div>
                 </div>
             </div>
@@ -712,12 +646,7 @@
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Class Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
-                    
-                    <h3>Projects</h3>
-                    <ul>
-                        <li>Category and tag organization</li>
-                    </ul>
+                    <p>Learned fundamentals of Embedded Systems Design, focusing on the STM32 system. Got hands-on lab experience with Memory-Mapped I/O, Interrupts, FPGA's, Communication Protocols (UART, SPI, I2C, RS232), ADC/DAC's, and DMA. Ending of the course was dedicated to learning diverse topics in embedded systems and a significant course final project.</p>
                     
                     <h3>Programming Languages & Technologies</h3>
                     <div class="portfolio-tags">
@@ -736,17 +665,20 @@
     <div id="class-eecs-482" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Operating Systems (EECS 482)</h2>
+                <h2>Operating Systems (EECS 482) + Advanced OS Projects (EECS 498)</h2>
                 <a href="#education" class="close-modal">&times;</a>
             </div>
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Class Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
+                    <p>Learning about operating systems principles such as Monitor Primitives, OS scheduling, Virtual Memory, File Systems, and Distributed Systems. Applying knowledge through complex C++ projects that implement key portions of a Unix kernel's functionality.</p>
                     
                     <h3>Projects</h3>
                     <ul>
-                        <li>Category and tag organization</li>
+                        <li>Multi-threaded program with Mutexes and CV's for consumers and producers</li>
+                        <li>Thread library with multi-CPU management, spinlocks, mutexes, and CV's.</li>
+                        <li>Virtual Memory Pager</li>
+                        <li>Network File Server</li>
                     </ul>
                     
                     <h3>Programming Language</h3>
@@ -768,11 +700,14 @@
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Class Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
+                    <p>Learned about fundamentals of Computer Organization and Hardware using a class-specific ISA. Topics such as performance evaluation, pipelining, caches, and virtual memory were covered. Projects were written in C; class was taught in class-specific ISA and a subset of ARM Assembly.</p>
                     
                     <h3>Projects</h3>
                     <ul>
-                        <li>Category and tag organization</li>
+                        <li>Assembler and Assembly Simulator</li>
+                        <li>Object Linker Program</li>
+                        <li>Full Pipeline Simulation</li>
+                        <li>Cache Simulator</li>
                     </ul>
                     
                     <h3>Programming Languages</h3>
@@ -795,11 +730,14 @@
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Class Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
+                    <p>Learned fundamentals of the C++ STL and its data structures and how they are implemented. Discussed and applied algorithms such as BFS, DFS, Quicksort, Mergesort, Djikstra's, AVL Tree Balancing, and Dynamic Programming. Heavy emphasis on optimizing speed of implemented algorithms and memory efficiency.</p>
                     
                     <h3>Projects</h3>
                     <ul>
-                        <li>Category and tag organization</li>
+                        <li>Implemented BFS and DFS in a 2-Dimensional map pathfinding program</li>
+                        <li>Implemented an efficient Pairing Priority Queue</li>
+                        <li>Utilized map and unordered_map to create a bank simulation</li>
+                        <li>Implemented TSP Heuristics</li>
                     </ul>
                     
                     <h3>Programming Language</h3>
@@ -821,12 +759,7 @@
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Class Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
-                    
-                    <h3>Projects</h3>
-                    <ul>
-                        <li>Category and tag organization</li>
-                    </ul>
+                    <p>Learning about MOSFET device operation in context of digital circuits. Topics such as parasitic capacitance, transistor scaling, logic families (Static CMOS, Domino, PTL) are discussed and analyzed through SPICE simulations.</p>
                     
                     <h3>Technologies & Skills</h3>
                     <div class="portfolio-tags">
@@ -848,12 +781,7 @@
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Class Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
-                    
-                    <h3>Projects</h3>
-                    <ul>
-                        <li>Category and tag organization</li>
-                    </ul>
+                    <p>Learned about LTI systems, Impulse Response, Convolution, Fourier Transforms, Frequency Response, and Filtering. Applied basic signal processing using these concepts and RLC circuits.</p>
                     
                     <h3>Technologies & Skills</h3>
                     <div class="portfolio-tags">
@@ -875,17 +803,51 @@
             <div class="modal-body">
                 <div class="modal-text">
                     <h3>Class Overview</h3>
-                    <p>This minimalist blog platform was created to provide a clean reading experience with powerful features for content creators. The design focuses on readability and content organization.</p>
-                    
-                    <h3>Projects</h3>
-                    <ul>
-                        <li>Category and tag organization</li>
-                    </ul>
+                    <p>Analyzed circuits using KVL and KCL, identified common circuit types such as Wheatstone bridges, and simulated circuits using LTSpice. Applied fundamentals by building and analyzing circuits in lab with devices such as op-amps.</p>
                     
                     <h3>Technologies & Skills</h3>
                     <div class="portfolio-tags">
                         <span>LTSpice</span>
                         <span>MATLAB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills & Tools Modal -->
+    <div id="skills-tools" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Skills & Tools</h2>
+                <a href="#about" class="close-modal">&times;</a>
+            </div>
+            <div class="modal-body">
+                <div class="modal-text">
+                    <h3>Programming Languages</h3>
+                    <div class="portfolio-tags">
+                        <span>C</span>
+                        <span>C++</span>
+                        <span>SystemVerilog</span>
+                        <span>Verilog</span>
+                        <span>Python</span>
+                        <span>Bash</span>
+                        <span>ARM Assembly</span>
+                        <span>RISC-V Assembly</span>
+                        <span>Java</span>
+                        <span>MATLAB</span>
+                    </div>
+                    <p></p>
+                    <h3>Tools & Technologies</h3>
+                    <div class="portfolio-tags">
+                        <span>Git</span>
+                        <span>KiCad</span>
+                        <span>Xilinx Vivado</span>
+                        <span>Intel Quartus Prime</span>
+                        <span>LTSpice</span>
+                        <span>Synopsis Verdi</span>
+                        <span>Cadence Virtuoso</span>
+                        <span>Altium Designer</span>
                     </div>
                 </div>
             </div>
@@ -914,27 +876,6 @@
                         <h3>Location</h3>
                         <p>Ann Arbor, MI</p>
                     </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -946,5 +887,179 @@
             <p>Hey, this is the bottom of the page. You can stop scrolling now!</p>
         </div>
     </footer>
+
+    <!-- Script for interactive scrolling skills -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollingContainer = document.getElementById('scrollingSkills');
+            const scrollingContent = document.getElementById('scrollingContent');
+            
+            let isHovering = false;
+            let isDragging = false;
+            let scrollPosition = 0;
+            let contentWidth = 0;
+            let animationPaused = false;
+            let startX = 0;
+            let startScrollPosition = 0;
+            
+            // Calculate the width of one set of content
+            function calculateContentWidth() {
+                const firstContent = scrollingContent.querySelector('.scrolling-skills-content');
+                contentWidth = firstContent.offsetWidth;
+            }
+            
+            calculateContentWidth();
+            window.addEventListener('resize', calculateContentWidth);
+            
+            // Handle mouse enter/leave
+            scrollingContainer.addEventListener('mouseenter', function() {
+                isHovering = true;
+                pauseAnimation();
+            });
+            
+            scrollingContainer.addEventListener('mouseleave', function() {
+                isHovering = false;
+                if (!isDragging) {
+                    resumeAnimation();
+                }
+            });
+            
+            // Pause the automatic animation
+            function pauseAnimation() {
+                if (!animationPaused) {
+                    scrollingContent.style.animationPlayState = 'paused';
+                    
+                    // Get the current transform value
+                    const computedStyle = window.getComputedStyle(scrollingContent);
+                    const transform = computedStyle.getPropertyValue('transform');
+                    
+                    if (transform && transform !== 'none') {
+                        const matrix = new DOMMatrix(transform);
+                        scrollPosition = matrix.m41; // Get the X translation value
+                    }
+                    
+                    animationPaused = true;
+                    scrollingContent.style.transform = `translateX(${scrollPosition}px)`;
+                    scrollingContent.style.animation = 'none';
+                }
+            }
+            
+            // Resume the automatic animation
+            function resumeAnimation() {
+                animationPaused = false;
+                
+                // Calculate what percentage through the animation we are
+                const percentage = (Math.abs(scrollPosition) % contentWidth) / contentWidth;
+                
+                // Reset the animation with the correct starting point
+                scrollingContent.style.animation = 'none';
+                scrollingContent.offsetHeight; // Trigger reflow
+                scrollingContent.style.animation = `scroll 30s linear infinite`;
+                scrollingContent.style.animationDelay = `-${percentage * 30}s`;
+                scrollingContent.style.transform = '';
+            }
+            
+            // Handle drag start
+            scrollingContainer.addEventListener('mousedown', function(e) {
+                if (isHovering) {
+                    e.preventDefault();
+                    isDragging = true;
+                    startX = e.clientX;
+                    startScrollPosition = scrollPosition;
+                    scrollingContainer.classList.add('dragging');
+                }
+            });
+            
+            // Handle dragging
+            window.addEventListener('mousemove', function(e) {
+                if (isDragging) {
+                    const dx = e.clientX - startX;
+                    scrollPosition = startScrollPosition + dx;
+                    
+                    // Handle wrapping for infinite scroll effect
+                    if (scrollPosition > 0) {
+                        scrollPosition = -contentWidth + (scrollPosition % contentWidth);
+                        startX = e.clientX;
+                        startScrollPosition = scrollPosition;
+                    } else if (Math.abs(scrollPosition) > contentWidth) {
+                        scrollPosition = scrollPosition % contentWidth;
+                        startX = e.clientX;
+                        startScrollPosition = scrollPosition;
+                    }
+                    
+                    scrollingContent.style.transform = `translateX(${scrollPosition}px)`;
+                }
+            });
+            
+            // Handle drag end
+            window.addEventListener('mouseup', function() {
+                if (isDragging) {
+                    isDragging = false;
+                    scrollingContainer.classList.remove('dragging');
+                    
+                    // If not hovering anymore, resume animation
+                    if (!isHovering) {
+                        resumeAnimation();
+                    }
+                }
+            });
+            
+            // Handle touch events for mobile
+            scrollingContainer.addEventListener('touchstart', function(e) {
+                pauseAnimation();
+                isDragging = true;
+                startX = e.touches[0].clientX;
+                startScrollPosition = scrollPosition;
+                scrollingContainer.classList.add('dragging');
+            }, { passive: true });
+            
+            window.addEventListener('touchmove', function(e) {
+                if (isDragging) {
+                    const dx = e.touches[0].clientX - startX;
+                    scrollPosition = startScrollPosition + dx;
+                    
+                    // Handle wrapping for infinite scroll effect
+                    if (scrollPosition > 0) {
+                        scrollPosition = -contentWidth + (scrollPosition % contentWidth);
+                        startX = e.touches[0].clientX;
+                        startScrollPosition = scrollPosition;
+                    } else if (Math.abs(scrollPosition) > contentWidth) {
+                        scrollPosition = scrollPosition % contentWidth;
+                        startX = e.touches[0].clientX;
+                        startScrollPosition = scrollPosition;
+                    }
+                    
+                    scrollingContent.style.transform = `translateX(${scrollPosition}px)`;
+                }
+            }, { passive: true });
+            
+            window.addEventListener('touchend', function() {
+                if (isDragging) {
+                    isDragging = false;
+                    scrollingContainer.classList.remove('dragging');
+                    resumeAnimation();
+                }
+            });
+            
+            // Handle wheel events for manual scrolling
+            scrollingContainer.addEventListener('wheel', function(e) {
+                if (isHovering) {
+                    e.preventDefault();
+                    
+                    // Adjust scroll position based on wheel delta
+                    scrollPosition -= e.deltaY;
+                    
+                    // Handle wrapping for infinite scroll effect
+                    if (scrollPosition > 0) {
+                        scrollPosition = -contentWidth + (scrollPosition % contentWidth);
+                    } else if (Math.abs(scrollPosition) > contentWidth) {
+                        scrollPosition = scrollPosition % contentWidth;
+                    }
+                    
+                    scrollingContent.style.transform = `translateX(${scrollPosition}px)`;
+                }
+            }, { passive: false });
+        });
+    </script>
 </body>
 </html>
