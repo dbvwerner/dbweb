@@ -91,6 +91,7 @@ li {
     padding-bottom: var(--spacing-md);
     font-family: "Kumar One", serif;
     font-weight: 300;
+    
 }
 
 .section-title::after {
@@ -101,7 +102,8 @@ li {
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
-    background-color: var(---color);
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .highlight {
@@ -196,7 +198,7 @@ nav ul li a {
 nav ul li a::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
     left: 0;
     width: 0;
     height: 2px;
@@ -355,17 +357,80 @@ nav ul li a:hover::after {
     min-width: 300px;
 }
 
+.bitflip-class{
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-top: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+.bitflip {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-top: var(--spacing-md);
+    color: var(--primary-color);
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.bitflip::after {
+    content: "Bit";
+    transition: opacity 0.5s ease-in-out;
+}
+
+.bitflip:hover::after {
+    content: "Text changed!";
+    animation: revertText infinite 2s;
+}
+
+@keyframes revertText {
+    0% { content: "0"; color: #520303; padding-right: 0.1rem;}
+    50% { content: "1"; color: var(--accent-color); }
+    100% { content: "0"; color: #520303;}
+}
+
 .img-placeholder {
     background-color: #eee;
-    height: 400px;
+    height: auto;
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
     border-radius: 8px;
     transition: transform var(--transition-speed) ease;
 }
 
 .img-placeholder:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.img-placeholder-modal {
+    background-color: #eee;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    border-radius: 10px;
+    transition: transform var(--transition-speed) ease;
+    object-fit:cover;
+}
+
+.img-placeholder-modal:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.img-placeholder-pfp {
+    background-color: #eee;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    border-radius: 40px;
+    transition: transform var(--transition-speed) ease;
+    object-fit:cover;
+}
+
+.img-placeholder-pfp:hover {
     transform: scale(1.02);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -679,6 +744,8 @@ nav ul li a:hover::after {
 
 .modal-image .img-placeholder {
     height: 300px;
+    max-width: 300px;
+    object-fit: cover;
 }
 
 .modal-text {
@@ -824,8 +891,6 @@ footer {
     opacity: 1;
 }
 
-/* Updated scrolling skills CSS */
-
 .scrolling-skills-container {
     width: 100%;
     overflow: hidden;
@@ -842,7 +907,7 @@ footer {
 }
 
 .scrolling-skills-container::after {
-    content: 'Click to view';
+    content: '← Drag to scroll →';
     position: absolute;
     bottom: 3px;
     right: 10px;
@@ -855,7 +920,7 @@ footer {
 .scrolling-skills {
     display: flex;
     white-space: nowrap;
-    animation: scroll 15s linear infinite;
+    animation: scroll 30s linear infinite;
     will-change: transform;
     transition: transform 0.05s ease-out;
 }
